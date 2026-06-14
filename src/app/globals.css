@@ -11,9 +11,9 @@ html {
 
 body {
   background: #030712;
+  overflow-x: hidden;
 }
 
-/* Gradient text */
 .gradient-text {
   background: linear-gradient(135deg, #6366f1, #a78bfa, #c084fc);
   -webkit-background-clip: text;
@@ -21,12 +21,10 @@ body {
   background-clip: text;
 }
 
-/* Glow effect */
 .glow {
   box-shadow: 0 0 20px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.1);
 }
 
-/* Subtle grid background */
 .grid-bg {
   background-image:
     linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
@@ -34,7 +32,6 @@ body {
   background-size: 60px 60px;
 }
 
-/* Fade in animation */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -55,8 +52,8 @@ body {
 .animate-delay-300 { animation-delay: 0.3s; }
 .animate-delay-400 { animation-delay: 0.4s; }
 .animate-delay-500 { animation-delay: 0.5s; }
+.animate-delay-150 { animation-delay: 0.15s; }
 
-/* Floating animation */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -66,7 +63,6 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Card hover effect */
 .card-hover {
   transition: all 0.3s ease;
 }
@@ -76,7 +72,24 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
 }
 
-/* Scrollbar */
+.skill-card {
+  perspective: 600px;
+}
+
+.skill-card:hover {
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-link-underline {
+  width: 100%;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -94,10 +107,14 @@ body {
   background: #374151;
 }
 
-/* Nav blur */
 .nav-blur {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   background: rgba(3, 7, 18, 0.8);
   border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
 }
