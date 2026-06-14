@@ -24,7 +24,9 @@ function Nav() {
   return (
     <nav className="nav-blur fixed top-0 w-full z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold gradient-text">zen.</a>
+        <a href="#" className="text-xl font-bold gradient-text">
+          zen.
+        </a>
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <a
@@ -57,15 +59,17 @@ function Hero() {
         </div>
 
         <h1 className="animate-fade-up animate-delay-100 text-5xl md:text-7xl font-bold tracking-tight mb-6">
-          Hi, I&apos;m <span className="gradient-text">Muhammad Rafi Putra Hidayat</span>
+          Hi, I&apos;m <span className="gradient-text">Rafi Putra</span>
         </h1>
         <p className="animate-fade-up animate-delay-150 text-lg text-gray-500 mb-4">
-          but you can call me <span className="text-indigo-400 font-medium">Zen</span> ✨
+          but you can call me{" "}
+          <span className="text-indigo-400 font-medium">Zen</span> ✨
         </p>
 
         <p className="animate-fade-up animate-delay-200 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          I craft beautiful mobile experiences with Flutter. Passionate about clean architecture, 
-          smooth animations, and building apps that users love.
+          I craft beautiful mobile experiences with Flutter. Passionate about
+          clean architecture, smooth animations, and building apps that users
+          love.
         </p>
 
         <div className="animate-fade-up animate-delay-300 flex items-center justify-center gap-4">
@@ -85,9 +89,22 @@ function Hero() {
 
         {/* Scroll indicator */}
         <div className="animate-fade-up animate-delay-500 mt-20 animate-float">
-          <a href="#about" className="inline-block text-gray-600 hover:text-gray-400 transition-colors">
-            <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <a
+            href="#about"
+            className="inline-block text-gray-600 hover:text-gray-400 transition-colors"
+          >
+            <svg
+              className="w-6 h-6 mx-auto"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
             </svg>
           </a>
         </div>
@@ -113,36 +130,47 @@ function About() {
 
           <div className="space-y-6">
             <p className="text-gray-300 leading-relaxed">
-              I&apos;m a passionate mobile developer based in Indonesia, currently studying at{" "}
-              <span className="text-indigo-400 font-medium">PENS</span> (Politeknik Elektronika Negeri Surabaya).
+              I&apos;m a passionate mobile developer based in Indonesia,
+              currently studying at{" "}
+              <span className="text-indigo-400 font-medium">PENS</span>{" "}
+              (Politeknik Elektronika Negeri Surabaya).
             </p>
             <p className="text-gray-300 leading-relaxed">
-              I specialize in building cross-platform mobile applications with Flutter. 
-              I love creating smooth, native-feeling apps with beautiful UI and solid performance. 
-              When I&apos;m not coding, you can find me exploring new Flutter packages, tinkering with Dart, 
+              I specialize in building cross-platform mobile applications with
+              Flutter. I love creating smooth, native-feeling apps with
+              beautiful UI and solid performance. When I&apos;m not coding, you
+              can find me exploring new Flutter packages, tinkering with Dart,
               or learning about mobile architecture patterns.
             </p>
             <p className="text-gray-300 leading-relaxed">
               Currently working on{" "}
-              <span className="text-indigo-400 font-medium">ExTract</span> — an invoice OCR project 
-              that simplifies document processing with AI.
+              <span className="text-indigo-400 font-medium">ExTract</span> — an
+              invoice OCR project that simplifies document processing with AI.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-4">
               <div>
-                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Location</h4>
+                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                  Location
+                </h4>
                 <p className="text-gray-300">Surabaya, Indonesia</p>
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Focus</h4>
+                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                  Focus
+                </h4>
                 <p className="text-gray-300">Flutter & Dart</p>
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Education</h4>
+                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                  Education
+                </h4>
                 <p className="text-gray-300">PENS</p>
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Interest</h4>
+                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                  Interest
+                </h4>
                 <p className="text-gray-300">Mobile, AI, DevOps</p>
               </div>
             </div>
@@ -182,7 +210,9 @@ function Skills() {
               <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
                 {skill.icon}
               </div>
-              <h3 className="font-semibold text-sm text-white mb-1">{skill.name}</h3>
+              <h3 className="font-semibold text-sm text-white mb-1">
+                {skill.name}
+              </h3>
               <p className="text-xs text-gray-500">{skill.desc}</p>
             </div>
           ))}
@@ -224,7 +254,7 @@ function Projects() {
   return (
     <section id="projects" className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader title="Projects" subtitle="Things I&apos;ve built" />
+        <SectionHeader title="Projects" subtitle="Things I've built" />
 
         <div className="grid md:grid-cols-3 gap-6 mt-16">
           {projects.map((project) => (
@@ -268,11 +298,11 @@ function Contact() {
   return (
     <section id="contact" className="py-32 px-6 bg-gray-900/30">
       <div className="max-w-2xl mx-auto text-center">
-        <SectionHeader title="Get In Touch" subtitle="Let&apos;s connect" />
+        <SectionHeader title="Get In Touch" subtitle="Let's connect" />
 
         <p className="text-gray-400 mt-6 mb-10 leading-relaxed">
-          I&apos;m always open to new opportunities, collaborations, or just a friendly chat.
-          Feel free to reach out!
+          I&apos;m always open to new opportunities, collaborations, or just a
+          friendly chat. Feel free to reach out!
         </p>
 
         <div className="flex items-center justify-center gap-4 mb-10">
@@ -285,7 +315,9 @@ function Contact() {
               className="card-hover flex items-center gap-3 px-6 py-3 bg-gray-900 border border-gray-800 hover:border-indigo-500/30 rounded-xl"
             >
               <span className="text-xl">{link.icon}</span>
-              <span className="text-sm font-medium text-gray-300">{link.name}</span>
+              <span className="text-sm font-medium text-gray-300">
+                {link.name}
+              </span>
             </a>
           ))}
         </div>
@@ -307,26 +339,29 @@ function Footer() {
     <footer className="py-8 px-6 border-t border-gray-800/50">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-gray-600">
-          © {new Date().getFullYear()} Zen. Built with Next.js &amp; deployed with Docker.
+          © {new Date().getFullYear()} Zen. Built with Next.js &amp; deployed
+          with Docker.
         </p>
-        <p className="text-sm text-gray-600">
-          Made with ❤️ in Surabaya
-        </p>
+        <p className="text-sm text-gray-600">Made with ❤️ in Surabaya</p>
       </div>
     </footer>
   );
 }
 
 /* ─── Section Header ─── */
-function SectionHeader({ title, subtitle }: { title: string; subtitle: string }) {
+function SectionHeader({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle: string;
+}) {
   return (
     <div className="text-center mb-4">
       <p className="text-sm font-medium text-indigo-400 tracking-wider uppercase mb-2">
         {subtitle}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold text-white">
-        {title}
-      </h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
       <div className="mt-4 mx-auto w-16 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
     </div>
   );
