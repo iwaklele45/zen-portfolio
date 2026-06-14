@@ -47,7 +47,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" ref={sectionRef} className="py-32 px-6 bg-gray-900/30">
+    <section id="skills" ref={sectionRef} className="py-32 px-6 bg-gray-100/30 dark:bg-gray-900/30">
       <div className="max-w-6xl mx-auto">
         <SectionHeader title="Skills" subtitle="Technologies I work with" />
 
@@ -56,15 +56,15 @@ export default function Skills() {
             <div
               key={skill.name}
               ref={(el) => { cardsRef.current[i] = el; }}
-              className="card-hover skill-card group p-6 rounded-xl bg-gray-900/50 border border-gray-800 hover:border-indigo-500/30 text-center"
+              className="card-hover skill-card group p-6 rounded-xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 hover:border-indigo-500/30 text-center shadow-sm dark:shadow-none"
             >
               <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
                 {skill.icon}
               </div>
-              <h3 className="font-semibold text-sm text-white mb-1">
+              <h3 className="font-semibold text-sm text-gray-900 dark:text-white mb-1">
                 {skill.name}
               </h3>
-              <p className="text-xs text-gray-500">{skill.desc}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-500">{skill.desc}</p>
             </div>
           ))}
         </div>
@@ -117,10 +117,10 @@ function SectionHeader({
 
   return (
     <div ref={ref} className="text-center mb-4">
-      <p className="text-sm font-medium text-indigo-400 tracking-wider uppercase mb-2">
+      <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 tracking-wider uppercase mb-2">
         {subtitle}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">{title}</h2>
       <div className="section-line mt-4 mx-auto w-16 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full origin-center" />
     </div>
   );

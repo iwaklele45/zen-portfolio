@@ -28,13 +28,13 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer ref={ref} className="py-8 px-6 border-t border-gray-800/50">
+    <footer ref={ref} className="py-8 px-6 border-t border-gray-200/50 dark:border-gray-800/50">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-500 dark:text-gray-600">
           © {new Date().getFullYear()} Zen. Built with Next.js & deployed
           with Docker.
         </p>
-        <p className="text-sm text-gray-600">Made with ❤️ in Surabaya</p>
+        <p className="text-sm text-gray-500 dark:text-gray-600">Made with ❤️ in Surabaya</p>
       </div>
     </footer>
   );

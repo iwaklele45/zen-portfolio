@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ThemeToggle from "./ThemeToggle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,22 +42,26 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="nav-link text-sm text-gray-400 hover:text-white transition-colors duration-300 relative"
+              className="nav-link text-sm text-gray-400 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative"
             >
               {link.label}
               <span className="nav-link-underline absolute -bottom-1 left-0 h-px bg-indigo-500 w-0 transition-all duration-300" />
             </a>
           ))}
+          <ThemeToggle />
         </div>
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={`block w-6 h-0.5 bg-gray-300 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-gray-300 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-gray-300 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            className="flex flex-col gap-1.5 p-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className={`block w-6 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-6 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-6 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          </button>
+        </div>
       </div>
       <div className={`md:hidden overflow-hidden transition-all duration-500 ${menuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="px-6 pb-4 flex flex-col gap-4">
@@ -64,7 +69,7 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
+              className="text-sm text-gray-400 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}

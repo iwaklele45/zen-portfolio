@@ -12,7 +12,7 @@ import ParticleField from "@/components/ParticleField";
 
 export default function Home() {
   return (
-    <main className="grid-bg min-h-screen relative">
+    <main className="grid-bg min-h-screen relative bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <ParticleField />
       <CursorGlow />
       <ScrollProgress />

@@ -35,12 +35,12 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contact" ref={sectionRef} className="py-32 px-6 bg-gray-900/30">
+    <section id="contact" ref={sectionRef} className="py-32 px-6 bg-gray-100/30 dark:bg-gray-900/30">
       <div className="max-w-2xl mx-auto text-center">
-        <SectionHeader title="Get In Touch" subtitle="Let's connect" />
+        <SectionHeader title="Get In Touch" subtitle="Let&apos;s connect" />
 
         <div ref={contentRef}>
-          <p className="text-gray-400 mt-6 mb-10 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 mt-6 mb-10 leading-relaxed">
             I&apos;m always open to new opportunities, collaborations, or just a
             friendly chat. Feel free to reach out!
           </p>
@@ -52,10 +52,10 @@ export default function Contact() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-hover flex items-center gap-3 px-6 py-3 bg-gray-900 border border-gray-800 hover:border-indigo-500/30 rounded-xl"
+                className="card-hover flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-indigo-500/30 rounded-xl shadow-sm dark:shadow-none"
               >
                 <span className="text-xl">{link.icon}</span>
-                <span className="text-sm font-medium text-gray-300">
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   {link.name}
                 </span>
               </a>
@@ -118,10 +118,10 @@ function SectionHeader({
 
   return (
     <div ref={ref} className="text-center mb-4">
-      <p className="text-sm font-medium text-indigo-400 tracking-wider uppercase mb-2">
+      <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 tracking-wider uppercase mb-2">
         {subtitle}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">{title}</h2>
       <div className="section-line mt-4 mx-auto w-16 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full origin-center" />
     </div>
   );

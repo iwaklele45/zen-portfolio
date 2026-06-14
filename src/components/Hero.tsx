@@ -137,25 +137,25 @@ export default function Hero() {
 
       <div className="text-center max-w-3xl relative z-10">
         <div ref={badgeRef}>
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-wider text-indigo-400 uppercase bg-indigo-500/10 border border-indigo-500/20 rounded-full">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-wider text-indigo-600 dark:text-indigo-400 uppercase bg-indigo-100 dark:bg-indigo-500/10 border border-indigo-200 dark:border-indigo-500/20 rounded-full">
             Flutter Developer
           </span>
         </div>
 
         <h1
           ref={headingRef}
-          className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
+          className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white"
         >
           Hi, I&apos;m <span className="gradient-text">Rafi Putra</span>
         </h1>
-        <p ref={subRef} className="text-lg text-gray-500 mb-4">
+        <p ref={subRef} className="text-lg text-gray-500 dark:text-gray-500 mb-4">
           but you can call me{" "}
-          <span className="text-indigo-400 font-medium">Zen</span> ✨
+          <span className="text-indigo-600 dark:text-indigo-400 font-medium">Zen</span> ✨
         </p>
 
         <p
           ref={descRef}
-          className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           I craft beautiful mobile experiences with Flutter. Passionate about
           clean architecture, smooth animations, and building apps that users
@@ -171,7 +171,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-white text-sm font-medium rounded-lg transition-all duration-300 magnetic-btn"
+            className="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm font-medium rounded-lg transition-all duration-300 magnetic-btn"
           >
             Get In Touch
           </a>
@@ -180,7 +180,7 @@ export default function Hero() {
         <div ref={scrollRef} className="mt-20 animate-float">
           <a
             href="#about"
-            className="inline-block text-gray-600 hover:text-gray-400 transition-colors"
+            className="inline-block text-gray-400 dark:text-gray-600 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
           >
             <svg
               className="w-6 h-6 mx-auto"

@@ -46,6 +46,10 @@ export default function ParticleField() {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+      const isDark = document.documentElement.classList.contains("dark");
+      const particleColor = isDark ? "99, 102, 241" : "99, 102, 241";
+      const lineColor = isDark ? "99, 102, 241" : "99, 102, 241";
+
       particles.forEach((p, i) => {
         p.x += p.vx;
         p.y += p.vy;
@@ -57,7 +61,7 @@ export default function ParticleField() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(99, 102, 241, ${p.opacity})`;
+        ctx.fillStyle = `rgba(${particleColor}, ${p.opacity})`;
         ctx.fill();
 
         for (let j = i + 1; j < particles.length; j++) {
@@ -70,7 +74,7 @@ export default function ParticleField() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(99, 102, 241, ${0.06 * (1 - dist / 150)})`;
+            ctx.strokeStyle = `rgba(${lineColor}, ${0.06 * (1 - dist / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

@@ -27,8 +27,8 @@ const projects = [
     title: "More Coming Soon",
     desc: "Always building something new. Stay tuned for more Flutter apps and experiments.",
     tags: ["WIP"],
-    color: "from-gray-500/10 to-gray-600/10",
-    border: "border-gray-700",
+    color: "from-gray-200/50 to-gray-300/50 dark:from-gray-500/10 dark:to-gray-600/10",
+    border: "border-gray-300 dark:border-gray-700",
     link: "#",
   },
 ];
@@ -63,7 +63,7 @@ export default function Projects() {
   return (
     <section id="projects" ref={sectionRef} className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader title="Projects" subtitle="Things I've built" />
+        <SectionHeader title="Projects" subtitle="Things I&apos;ve built" />
 
         <div className="grid md:grid-cols-3 gap-6 mt-16">
           {projects.map((project, i) => (
@@ -74,17 +74,17 @@ export default function Projects() {
               target={project.link.startsWith("http") ? "_blank" : undefined}
               className={`card-hover group block p-8 rounded-2xl bg-gradient-to-br ${project.color} border ${project.border} hover:border-indigo-500/40`}
             >
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                 {project.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
                 {project.desc}
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 text-xs font-medium text-gray-400 bg-gray-800/50 rounded-full"
+                    className="px-3 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-gray-200/50 dark:bg-gray-800/50 rounded-full"
                   >
                     {tag}
                   </span>
@@ -142,10 +142,10 @@ function SectionHeader({
 
   return (
     <div ref={ref} className="text-center mb-4">
-      <p className="text-sm font-medium text-indigo-400 tracking-wider uppercase mb-2">
+      <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 tracking-wider uppercase mb-2">
         {subtitle}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">{title}</h2>
       <div className="section-line mt-4 mx-auto w-16 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full origin-center" />
     </div>
   );
